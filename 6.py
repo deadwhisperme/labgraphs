@@ -1,5 +1,3 @@
-import matplotlib.pyplot as plt
-import networkx as nx
 def graph():
     N = int(input('Кол-во вершин '))
     weight = [[float('+inf')]*N for j in range(N)]
