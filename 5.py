@@ -1,10 +1,12 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 def graph():
+    inp3 = open("./inp3.txt","r")
+    ls = inp3.readlines()
     G = {}
-    N = int(input('Кол-во рёбер'))
-    for i in range(N):
-        a, b, weight = input().split()
+    for i in range(len(ls)):
+        ls[i] = ls[i].rstrip()
+        a, b, weight = ls[i].split()
         weight = float(weight)
         if a not in G:
             G[a] = {b:weight}
