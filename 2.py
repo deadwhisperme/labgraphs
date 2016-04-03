@@ -1,10 +1,12 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 def graph():
+    inp2 = open("./inp2.txt","r")
+    ls = inp2.readlines()
     G = {}
-    N = int(input('Кол-во рёбер'))
-    for i in range(N):
-        a, b = input().split()
+    for i in range(len(ls)):
+        ls[i] = ls[i].rstrip()
+        a, b = ls[i].split()
         if a not in G:
             G[a] = {b}
         else:
